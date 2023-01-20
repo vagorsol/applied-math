@@ -1,0 +1,79 @@
+logistic=@(t) (100*500)/(100+(500-100)*exp(-1*t));
+logistic(5)
+
+ans =
+
+  486.8778
+
+logistic=@(t) (100.*500)./(100+(500-100).*exp(-1.*t));
+logistic(5)
+
+ans =
+
+  486.8778
+
+logistic(0)
+
+ans =
+
+   100
+
+logistic(10)
+
+ans =
+
+  499.9092
+
+x=0:1:10;
+y=logistic(x);
+plot(x,y)
+hold off
+plot(x,y)
+title('Population Growth of Bacteria')
+xlabel('Time')
+ylabel('Population Growth')
+hold on
+logistic=@(t) (100.*500)./(100+(500-100).*exp(-1.*t));
+logistic2=@(t) (700.*500)./(700+(500-700).*exp(-1.*t));
+logitic2(0)
+{Undefined function or variable 'logitic2'.
+} 
+logistic2(0)
+
+ans =
+
+   700
+
+logistic2(5)
+
+ans =
+
+  500.9644
+
+logistic2(10)
+
+ans =
+
+  500.0065
+
+logistic2(15)
+
+ans =
+
+  500.0000
+
+logistic2(25)
+
+ans =
+
+  500.0000
+
+y2 = logistic2(x);
+plot(x,y2)
+hold off
+plot(x,y)
+title('Population Growth of Bacteria')
+xlabel('Time')
+xlabel('Time')
+ylabel('Population Growth')
+diary off

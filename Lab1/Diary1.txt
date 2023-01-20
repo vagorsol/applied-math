@@ -1,0 +1,68 @@
+ls
+
+.           ..          Diary1.txt  
+
+cat Diary1
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cat')" style="font-weight:bold">cat</a>
+Dimension argument must be a real, positive, integer
+scalar.
+} 
+cat Diary1.txt
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cat')" style="font-weight:bold">cat</a>
+Dimension argument must be a real, positive, integer
+scalar.
+} 
+(5*2+3.5)/5
+
+ans =
+
+    2.7000
+
+(5*2+3.5)/5;
+1/0
+
+ans =
+
+   Inf
+
+x=3
+
+x =
+
+     3
+
+y=4;
+x+y
+
+ans =
+
+     7
+
+z=sqrt(x^2+y^2) % this is a comment
+
+z =
+
+     5
+
+w=(3^2)/sqrt(20)
+
+w =
+
+    2.0125
+
+diary off
+% i can't believe MatLab made cat do something different than it does in terminal smh
+z-2
+
+ans =
+
+     3
+
+diary on
+x+y+y
+
+ans =
+
+    11
+
+diary off
