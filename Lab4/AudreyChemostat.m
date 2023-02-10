@@ -1,8 +1,8 @@
-x = -1:0.2:3;
-y = -1:0.2:3;
+x = 0:0.2:3;
+y = 0:0.2:3;
 
-a1 = -1;
-a2 = -1;
+a1 = 2;
+a2 = 2;
 
 for i = 1:length(x)
     for j = 1:length(y)
@@ -24,8 +24,15 @@ v = v';
 quiver(x, y, u, v)
 hold on
 
+% trajectories
 [t, Z] = ode45(@func, [0,15], [0.5,0.5]);
+[t2, Z2] = ode45(@func, [0,15], [1.5,1.5]);
+[t3, Z3] = ode45(@func, [0,15], [2.5,2.5]);
+
 plot(Z(:,1), Z(:,2))
+plot(Z2(:,1), Z2(:,2))
+plot(Z3(:,1), Z3(:,2))
+
 hold off
 title("Bacteria Density vs Nutrient Concentration")
 xlabel("Bacteria Density");
@@ -35,8 +42,8 @@ ylabel("Nutrient Concentration");
 function h = func(t, Y)
     x = Y(1);
     y = Y(2);
-    a1 = -1;
-    a2 = -1;
+    a1 = 2;
+    a2 = 2;
     h(1) = a1 *(y/(1+y))* x - x;
     h(2) = -1 *(y/(1+y))* x - y + a2;
     h = h';
