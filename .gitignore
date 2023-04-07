@@ -31,4 +31,4 @@ codegen/
 octave-workspace
 
 # Images
-.png
+*.png
