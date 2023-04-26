@@ -7,7 +7,7 @@ end
 
 title('Gene Activation')
 legend('s0 = 0.05','s0 = 0.1','s0 = 0.15','s0 = 0.2', 's0 = 0.25')
-axis([0 25 0 1])
+axis([0 55 0 8])
 xlabel('Time')
 ylabel('Level of Gene Product')
 
